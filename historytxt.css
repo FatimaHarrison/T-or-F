@@ -12,11 +12,15 @@
 
 */
 
-header{
+header nav{
     background-color: rgb(51,51,51);
     text-align: center;
     width: 55em;
+    display: box;
+    padding:0px;
+    margin: 0px;
 }
+
 header img{
     height: 4em;
 }
@@ -38,7 +42,7 @@ nav ul li{
 nav ul li a{
     color: rgb(212,212,212);
     text-decoration: none;
-}
+ }
 nav ul li a:hover{
     color: white;
 }
