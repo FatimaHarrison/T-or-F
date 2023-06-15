@@ -4,118 +4,81 @@
    Case Problem 1
 
    JPF Style Sheet
-   Author: Rebecca Peretz
-   Date:   3/1/2014
+   Author: Fatima Harrison
+   Date:   06/15/23
 
    Filename:         jpf.css
    Supporting Files: 
 
 */
 
-
 /* Default styles */
 
 * {
-   margin: 0px;
-   list-style: none;
-   padding: 0px;
-   text-decoration: none;
+  margin: 0px;
+  list-style: none;
+  padding: 0px;
+  text-decoration: none;
 }
-
 
 /* Body styles */
 body {
-   font-family: Verdana, Geneva, sans-serif;
-   width: 900px;
-   margin: 0px auto;
+  font-family: Verdana, Geneva, sans-serif;
+  width: 900px;
+  margin: 0px auto;
 }
 
-
-/* Horizontal Navigation List */
-nav.horizontal ul {
-   height: 24px;
-   margin-top: -30px;
-   width: 100%;
+caption {
+  text-align: center;
 }
 
-nav.horizontal ul li {
-   background-color: black;
-   display: inline;
-   font-size: 10px;
-   margin: 0px 15px 0px 10px;
+table.subTable {
+  border-collapse: collapse;
+  width: 110px;
 }
 
-nav.horizontal ul li a {
-   color: rgb(254, 232, 130);
+tbody td {
+  border: 5px outset grey;
+  border-collapse: collapse;
 }
 
-nav.horizontal ul li a:hover {
-   color: rgb(211, 254, 106);
+th {
+  color: grey;
+  font-size: 8px;
+  height: 40px;
 }
 
-
-
-/* Vertical Navigation List */
-nav.vertical ul {
-   background-color: black;
-   clear: left;
-   float: left;
-   width: 150px;
-
-   -moz-border-radius-bottomright: 100% 250px;
-   -webkit-border-bottom-right-radius: 100% 250px;
-   border-bottom-right-radius: 100% 250px;
+table tr td {
+  border: 1px solid black;
+  color: blue;
+  height: 40px;
+  box-shadow: 2px;
+  text-align: center;
+  vertical-align: middle;
 }
 
-nav.vertical ul li {
-   font-size: 12px;
-   line-height: 1.6em;
-   margin: 5px 0px 7px 10px;
+td.goldBox {
+  background-image: url(gold.jpg);
+  background-position: 50%;
 }
 
-nav.vertical ul li:first-of-type {
-   margin-top: 20px;
+td.greenBox {
+  background-image: url(green.jpg);
+  background-position: 50%;
 }
-
-nav.vertical ul li:last-of-type {
-   padding-bottom: 30px;
-}
-
-nav.vertical ul li a {
-   color: rgb(254, 232, 130);
-}
-
-nav.vertical ul li a:hover {
-   color: rgb(211, 254, 106);
-   text-decoration: overline underline;
-}
-
-
 
 /* Main Page Section */
 section {
-   float: left;
-   margin: 10px 0px 0px 20px;
-   width: 500px;
+  float: left;
+  margin-top: 10px 0px 0px 20px;
+  width: 500px;
+}
+article h1 {
+  font-size: 14px;
 }
 
-section article h1 {
-   font-size: 14px;
-   margin-top: 10px;
+p {
+  font-size: 10px;
+  margin: 10px 0px;
+  width: 600px;
 }
-
-section article p {
-   font-size: 10px;
-   margin: 10px 0px;
-   width: 420px;
-}
-
-
-
-
-
-
-
-
-
-
