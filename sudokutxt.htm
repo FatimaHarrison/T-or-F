@@ -1,34 +1,32 @@
 <!DOCTYPE html>
-<html>
-
-   <head>
-   <!--
+<html lang="en">
+  <head>
+    <!--
       New Perspectives on HTML and CSS
       Tutorial 5
       Case Problem 1
 
       Sudoku Puzzle
-      Author: 
-      Date:   
+      Author: Fatima Harrison
+      Date: 06/15/23
 
       Filename:         sudoku.htm
       Supporting files: gold.jpg, green.jpg, jpf.css, jpf.jpg, 
                         modernizr-1.5.js, stable.css,
    -->
-
-      <meta charset="UTF-8" />
-      <title>Daily Sudoku Puzzle</title>
-      <script src="modernizr-1.5.js"></script>
-
-   </head>
-
-   <body>
-      <header>
-         <img src="jpf.jpg" alt="The Japanese Puzzle Factory" />
-      </header>
-
-      <nav class="horizontal">
-         <ul>
+    <title>Sudoku Puzzle</tilte> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel= "stylesheet" href="jpf.css" >
+     <script src="modernizr-1.5.js></script>
+    <title>Static Template</title>
+  </head>
+  <header> 
+  <img src="jpf.jpg" alt ="The japanese puzzle factory">
+  </header>
+  <nav class="horizontal">
+    <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#">Online Puzzles</a></li>
             <li><a href="#">Store</a></li>
@@ -64,10 +62,233 @@
          </ul>
       </nav>
 
-      <section id="main">
+  <section id="main">
+  <caption> Sudoku </caption>
+  <table class = "spuzzle" border="5" width = "19" height = "4" cellspacing = "1" cellpadding = "9">
+    <thead>
+            <tr>
+               <td></td>
+               <td>1</td>
+               <td>2</td>
+               <td>3</td>
+               <td>4</td>
+               <td>5</td>
+               <td>6</td>
+               <td>7</td>
+               <td>8</td>
+               <td>9</td>
+            </tr>
+         </thead>
+         <tbody>
+            <tr>
+               <th>A</th>
+               <td rowspan="3" colspan="3" class= "greenBox">
+                <table class="subTable">
+                     <tr>
+                        <td></td>
+                        <td></td>
+                        <td>4</td>
+                     </tr>
+                     <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <td>3</td>
+                        <td>5</td>
+                        <td></td>
+                     </tr>
+                  </table>
+               </td>
+               <td rowspan="3" colspan="3" class="goldBox">
+                <table class="subTable">
+                     <tr>
+                        <td>5</td>
+                        <td></td>
+                        <td>3</td>
+                     </tr>
+                     <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                  </table>
+               </td>
+               <td rowspan="3" colspan="3" class="greenBox">
+                <table class="subTable">
+                     <tr>
+                        <td></td>
+                        <td>7</td>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <td>3</td>
+                        <td>1</td>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <td>2</td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+            <tr>
+               <th>B</th>
+               
+            </tr>
+            <tr>
+               <th>C</th>
+               
+            </tr>
+            <tr>
+               <th>D</th>
+               <td rowspan="3" colspan="3" class="goldBox">
+                <table class="subTable">
+                     <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <td>6</td>
+                        <td></td>
+                        <td>9</td>
+                     </tr>
+                     <tr>
+                        <td>4</td>
+                        <td>7</td>
+                        <td>2</td>
+                     </tr>
+                  </table>
+               </td>
+               <td rowspan="3" colspan="3" class="greenBox">
+                <table class="subTable">
+                     <tr>
+                        <td></td>
+                        <td>2</td>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <td></td>
+                        <td>9</td>
+                        <td></td>
+                     </tr>
+                  </table>
+               </td>
+               <td rowspan="3" colspan="3" class="goldBox">
+                <table class="subTable">
+                     <tr>
+                        <td>9</td>
+                        <td>9</td>
+                        <td>7</td>
+                     </tr>
+                     <tr>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>8</td>
+                     </tr>
+                     <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+            <tr>
+               <th>E</th>
+               
+            </tr>
+            <tr>
+               <th>F</th>
+               
+            </tr>
+            <tr>
+               <th>G</th>
+               <td rowspan="3" colspan="3" class="greenBox">
+                <table class="subTable">
+                     <tr>
+                        <td></td>
+                        <td></td>
+                        <td>1</td>
+                     </tr>
+                     <tr>
+                        <td></td>
+                        <td>4</td>
+                        <td>5</td>
+                     </tr>
+                     <tr>
+                        <td></td>
+                        <td>6</td>
+                        <td></td>
+                     </tr>
+                  </table>
+               </td>
+               <td rowspan="3" colspan="3" class="goldBox">
+                <table class="subTable">
+                 <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <td>8</td>
+                        <td></td>
+                        <td>1</td>
+                     </tr>
+                  </table>
+               </td>
+               <td rowspan="3" colspan="3" class="greenBox">
+                <table class="subTable">
+                     <tr>
+                        <td></td>
+                        <td>5</td>
+                        <td>2</td>
+                     </tr>
+                     <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <td>7</td>
+                        <td></td>
+                        <td></td>
+                     </tr>
+                  </table>
+               </td>
+            </tr>
+            <tr>
+               <th>H</th>
+               
+            </tr>
+            <tr>
+               <th>I</th>
+               
+            </tr>
+         </tbody>
+      </table>
+      </section>
 
-
-         <article>
+      <article>
             <h1>To Play</h1>
             <p>Sudoku is played on a 9x9 grid with nine 3x3 boxes
                placed within the grid. Enter a digit from 1 to 9 in
@@ -85,3 +306,4 @@
    </body>
 
 </html>
+  
