@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500&display=swap');
+
+body{
+  background-color:lightslategray;
+}
+.navbar {
+  background-color: tran;
+  padding-left: 12px;
+  padding-right: 16px;
+  position: relative;
+  height: 76px;
+  background-color:black;
+}
+
+.navbar-brand{
+  color: azure;
+  font-family: 'Cormorant SC', serif;
+}
+
+.nav-link{
+  color: azure;
+  font-family: 'Cormorant SC', serif;
+}
+
+.nav-link .active{
+  color: azure;
+}
+
+.nav-item{
+  color: azure;
+}
+
+@media (min-width: 767.98px) {
+  .navbar {
+    top: 0;
+    position: sticky;
+    z-index: 999;
+  }
+
+footer{
+  padding: 17;
+  background-color:black;
+  color: azure;
+  }
+
+.img-thumbnail{
+  height: 279px;
+  width: 285px;
+  }
+
+  iframe{
+    border: black;
+    border-width: 300px;
+  }
+  
+  h1{
+    color: black;
+    font-weight: 20px;
+    font-size: 25px;
+  }
+  
+  h2{
+    color: black;
+    font-weight: 20px;
+    font-size: 25px;
+  }
+
+  h3{
+    color: black;
+    font-weight: 20px;
+    font-size: 25px;
+  }
+  
+  p{
+    color: black;
+   }
