@@ -102,22 +102,18 @@
         { q: "We all have our ups and downs.", a: "t" }
     ];
 	
-var words = ["eterpan", "disney", "iphone", "missippi", "ruby", "pink",
+var words = ["peterpan", "disney", "iphone", "missippi", "ruby", "pink",
 "orlando", "digital", "train", "quinceanera", "washington", "christmas",
 "teammate", "lie", "sabado", "marcales", "yahoo", "watermelon",
 "javascript", "ticket", "egg", "internet", "browser", "walmart", "generation",
 "patrick", "galaxy", "cat", "kitten", "ice", "bracelet", "incentive", "highschool", "windows", "juno"];
 
-
-
-	
-	
-	document.getElementById("question").innerHTML = array[count].q;
+    document.getElementById("question").innerHTML = array[count].q;
 
    
     document.onkeyup   = function (event) {
         var input = event.key;
-        if(input == "t" || input == "f"){
+        if(input == word){
             if (array[count].a == input) {
                 alert("Correct");
                 score++;
