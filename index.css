@@ -1,76 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500&display=swap');
+*{
+    box-sizing: border-box;
+    font-size: 25px;
+    color: oldlace;
+    font-style: italic;
+    font-family: 'Georgia';
+}
+
+
 
 body{
-  background-color:lightslategray;
-}
-.navbar {
-  background-color: tran;
-  padding-left: 12px;
-  padding-right: 16px;
-  position: relative;
-  height: 76px;
-  background-color:black;
-}
-
-.navbar-brand{
-  color: azure;
-  font-family: 'Cormorant SC', serif;
+    text-align: center;
+    color: oldlace;
+    vertical-align: middle;
+    padding-top: 5%;
+    background-image: url("https://i.gifer.com/1jzm.gif");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
 }
 
-.nav-link{
-  color: azure;
-  font-family: 'Cormorant SC', serif;
+h2{
+    font-size: 45;
 }
 
-.nav-link .active{
-  color: azure;
+
+h3{
+    font-size: 40px;
+    font-family: 'Georgia';
+    font-weight: 600;
+    font-style: italic;
+    color: oldlace;
 }
 
-.nav-item{
-  color: azure;
+.col{
+    flex-grow: 1;
+    max-width: 100%; 
+    font-size: 40px;
+    font-family: 'Georgia';
+    font-style: italic;
+    font-weight: 600;
+    color: oldlace;
 }
 
-@media (min-width: 767.98px) {
-  .navbar {
-    top: 0;
-    position: sticky;
-    z-index: 999;
-  }
 
-footer{
-  padding: 17;
-  background-color:black;
-  color: azure;
-  }
+p{
+  font-style: 'Times New Roman'
+  font-size: 12px;
+}
 
-.img-thumbnail{
-  height: 279px;
-  width: 285px;
-  }
-
-  iframe{
-    border: black;
-    border-width: 300px;
-  }
-  
-  h1{
-    color: black;
-    font-weight: 20px;
-    font-size: 25px;
-  }
-  
-  h2{
-    color: black;
-    font-weight: 20px;
-    font-size: 25px;
-  }
-
-  h3{
-    color: black;
-    font-weight: 20px;
-    font-size: 25px;
-  }
-  
-  p{
-    color: black;
-   }
+h1{
+    font-style:italic;
+}
+    
+    
+    
