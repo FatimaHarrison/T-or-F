@@ -108,21 +108,8 @@ var words = ["eterpan", "disney", "iphone", "missippi", "ruby", "pink",
 "javascript", "ticket", "egg", "internet", "browser", "walmart", "generation",
 "patrick", "galaxy", "cat", "kitten", "ice", "bracelet", "incentive", "highschool", "windows", "juno"];
 
-resetGame();
-console.log(words[wordIndex]);
-document.getElementById("word").innerHTML = displayMysteryWord();
-document.onkeyup = function (event) {
-    var input = event.key;
-    var regExp = new RegExp(input, "gi");
-    var placeholder = words[wordIndex];
-      if(placeholder.search(/[a-z]|[A-Z]/) != -1){
-        if(placeholder.includes(input)){
-            duplicate = placeholder.match(regExp);
-            for(var i = 0; i < duplicate.length; i++){
-                displayWord[placeholder.indexOf(input)] = input;
-                placeholder = placeholder.replace(input, " ");
-           }
-        }
+
+
 	
 	
 	document.getElementById("question").innerHTML = array[count].q;
@@ -154,6 +141,19 @@ document.onkeyup = function (event) {
         }
     }
 
+document.getElementById("word").innerHTML = displayMysteryWord();
+document.onkeyup = function (event) {
+    var input = event.key;
+    var regExp = new RegExp(input, "gi");
+    var placeholder = words[wordIndex];
+      if(placeholder.search(/[a-z]|[A-Z]/) != -1){
+        if(placeholder.includes(input)){
+            duplicate = placeholder.match(regExp);
+            for(var i = 0; i < duplicate.length; i++){
+                displayWord[placeholder.indexOf(input)] = input;
+                placeholder = placeholder.replace(input, " ");
+           }
+        }
    
     function displayTutorial() {
             var x = document.getElementById("tutorial");
