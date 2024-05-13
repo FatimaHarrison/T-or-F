@@ -1,10 +1,4 @@
 
-var words = ["peterpan", "disney", "iphone", "missippi", "ruby", "pink",
-"orlando", "digital", "train", "quinceanera", "washington", "christmas",
-"teammate", "lie", "sabado", "marcales", "yahoo", "watermelon",
-"javascript", "ticket", "egg", "internet", "browser", "walmart", "generation",
-"patrick", "galaxy", "cat", "kitten", "ice", "bracelet", "incentive", "highschool", "windows", "juno"];
-
 var array = [
         { q: "A baby elephant weighs about 2,055 pounds.", a: "f" },
         { q: "Micheal Lawrence was a screenwritter.", a: "t" },
@@ -21,6 +15,28 @@ var array = [
         { q: "We all have our ups and downs.", a: "t" }
     ];
 
+var words = ["peterpan", "disney", "iphone", "missippi", "ruby", "pink",
+"orlando", "digital", "train", "quinceanera", "washington", "christmas",
+"teammate", "lie", "sabado", "marcales", "yahoo", "watermelon",
+"javascript", "ticket", "egg", "internet", "browser", "walmart", "generation",
+"patrick", "galaxy", "cat", "kitten", "ice", "bracelet", "incentive", "highschool", "windows", "juno"];
+
+resetGame();
+console.log(words[wordIndex]);
+document.getElementById("word").innerHTML = displayMysteryWord();
+document.onkeyup = function (event) {
+    var input = event.key;
+    var regExp = new RegExp(input, "gi");
+    var placeholder = words[wordIndex];
+      if(placeholder.search(/[a-z]|[A-Z]/) != -1){
+        if(placeholder.includes(input)){
+            duplicate = placeholder.match(regExp);
+            for(var i = 0; i < duplicate.length; i++){
+                displayWord[placeholder.indexOf(input)] = input;
+                placeholder = placeholder.replace(input, " ");
+           }
+        }
+	
     document.getElementById("question").innerHTML = array[count].q;
     document.onkeyup   = function (event) {
         var input = event.key;
