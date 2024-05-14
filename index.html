@@ -101,19 +101,27 @@
         { q: "Janet Jackson is a silbing out of 5.", a: "f" },
         { q: "We all have our ups and downs.", a: "t" }
     ];
-	
+
 var words = ["peterpan", "disney", "iphone", "missippi", "ruby", "pink",
 "orlando", "digital", "train", "quinceanera", "washington", "christmas",
 "teammate", "lie", "sabado", "marcales", "yahoo", "watermelon",
 "javascript", "ticket", "egg", "internet", "browser", "walmart", "generation",
 "patrick", "galaxy", "cat", "kitten", "ice", "bracelet", "incentive", "highschool", "windows", "juno"];
-
-    document.getElementById("question").innerHTML = array[count].q;
-
    
-    document.onkeyup   = function (event) {
-        var input = event.key;
-        if(input == word){
+   document.onkeyup   = function (event) {
+   document.getElementById("question").innerHTML = array[count].q;
+   document.getElementById("word").innerHTML = displayMysteryWord();
+   document.onkeyup = function (event) {
+    var input = event.key;
+    var regExp = new RegExp(input, "gi");
+    var placeholder = words[wordIndex];
+      if(placeholder.search(/[a-z]|[A-Z]/) != -1){
+        if(placeholder.includes(input)){
+            duplicate = placeholder.match(regExp);
+            for(var i = 0; i < duplicate.length; i++){
+                displayWord[placeholder.indexOf(input)] = input;
+                placeholder = placeholder.replace(input, " ");
+         if(input == word){
             if (array[count].a == input) {
                 alert("Correct");
                 score++;
@@ -137,21 +145,7 @@ var words = ["peterpan", "disney", "iphone", "missippi", "ruby", "pink",
         }
     }
 
-document.getElementById("word").innerHTML = displayMysteryWord();
-document.onkeyup = function (event) {
-    var input = event.key;
-    var regExp = new RegExp(input, "gi");
-    var placeholder = words[wordIndex];
-      if(placeholder.search(/[a-z]|[A-Z]/) != -1){
-        if(placeholder.includes(input)){
-            duplicate = placeholder.match(regExp);
-            for(var i = 0; i < duplicate.length; i++){
-                displayWord[placeholder.indexOf(input)] = input;
-                placeholder = placeholder.replace(input, " ");
-           }
-        }
-   
-    function displayTutorial() {
+   function displayTutorial() {
             var x = document.getElementById("tutorial");
             var y = document.getElementById("tutorialButton");
             if (x.style.display === "none") {
