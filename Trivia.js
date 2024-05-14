@@ -1,5 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>34</title>
+    <style>
+        body{
+            display:block;
+            margin-left:auto;
+            margin-right:auto;
+            text-align: center;
+            background-color:black;
+            color: oldlace;
+        }
 
-var array = [
+        .button {
+            background-color:lightblue;
+            color: black;
+            border: 2px solid black;
+            padding: 16px 32px;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            border-radius: 16px;
+        }
+
+        .button:hover {
+            background-color: lightblue;
+            color: rgb(0, 0, 0);
+        }
+
+        #tutorial {
+            line-height: 2;
+            width: 40%;
+            padding: 25px 0;
+            text-align: center;
+            margin-top: 5px;
+            margin-left:auto;
+            margin-right:auto;
+            color: oldlace;
+        }
+       
+        h1{
+            font-family: 'Georgia';
+            color: oldlace;
+            font-size: 21x;
+            font-style: italic;
+        }
+       
+        h2{
+            font-family: 'Georgia';
+            color: oldlace;
+            font-size: 18px;
+            font-style: italic;
+        }
+       
+        h3{
+            font-family: 'Georgia';
+            color: oldlace;
+            font-size: 18px;
+            font-style: italic;
+        }
+       
+        h4{
+            font-family: 'arial';
+            color: oldlace;
+            font-size: 21px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the true or false game</h1>
+    <h2 id = "score">Current score: 0</h2>
+    <h3>Notice:</h3>
+    <button id="instructionsButton" class="button" onclick="Reveal instructions()>Put away instructions</button
+    <div id="Instructions">
+        To play the game
+        <br>Press the letters t or f to respond.
+    </div>
+    <hr style="width:50%;height:3px;border-width:0;color:gray;background-color:gray">
+    <h4 id = "question">e</h4>
+    <script>
+    var count = 0, score = 0;
+
+    var array = [
         { q: "A baby elephant weighs about 2,055 pounds.", a: "f" },
         { q: "Micheal Lawrence was a screenwritter.", a: "t" },
         { q: "The Marine Corps birthday is Nov 10th, 1775.", a: "t" },
@@ -14,8 +101,8 @@ var array = [
         { q: "Janet Jackson is a silbing out of 5.", a: "f" },
         { q: "We all have our ups and downs.", a: "t" }
     ];
-
-var words = ["peterpan", "disney", "iphone", "missippi", "ruby", "pink",
+	
+var words = ["eterpan", "disney", "iphone", "missippi", "ruby", "pink",
 "orlando", "digital", "train", "quinceanera", "washington", "christmas",
 "teammate", "lie", "sabado", "marcales", "yahoo", "watermelon",
 "javascript", "ticket", "egg", "internet", "browser", "walmart", "generation",
@@ -37,10 +124,13 @@ document.onkeyup = function (event) {
            }
         }
 	
-    document.getElementById("question").innerHTML = array[count].q;
+	
+	document.getElementById("question").innerHTML = array[count].q;
+
+   
     document.onkeyup   = function (event) {
         var input = event.key;
-        if(input == words){
+        if(input == "t" || input == "f"){
             if (array[count].a == input) {
                 alert("Correct");
                 score++;
@@ -60,7 +150,7 @@ document.onkeyup = function (event) {
             }
         }
         else{
-            alert("Remember the letters are all lowercase.");
+            alert("Remember only the keys t or f");
         }
     }
 
@@ -76,5 +166,10 @@ document.onkeyup = function (event) {
                 y.textContent = "Reveal instructions";
             }
     }
-    
-   
+    </script>
+     <div class = "sticky" id = "footer">
+    <div class = "sticky" id = "footer2">
+        <p>Copyright FatimaHarrison LLC©</p>
+    </div>                      
+</body>
+</html>
