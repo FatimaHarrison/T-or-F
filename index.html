@@ -102,19 +102,12 @@
         { q: "We all have our ups and downs.", a: "t" }
     ];
 
- document.onkeyup   = function (event) {
-   document.getElementById("question").innerHTML = array[count].q;
-  document.onkeyup = function (event) {
-    var input = event.key;
-    var regExp = new RegExp(input, "gi");
-    var placeholder = words[wordIndex];
-      if(placeholder.search(/[a-z]|[A-Z]/) != -1){
-        if(placeholder.includes(input)){
-            duplicate = placeholder.match(regExp);
-            for(var i = 0; i < duplicate.length; i++){
-                displayWord[placeholder.indexOf(input)] = input;
-                placeholder = placeholder.replace(input, " ");
-         if(input == word){
+ document.getElementById("question").innerHTML = array[count].q;
+
+   
+    document.onkeyup   = function (event) {
+        var input = event.key;
+        if(input == "t" || input == "f"){
             if (array[count].a == input) {
                 alert("Correct");
                 score++;
@@ -138,7 +131,8 @@
         }
     }
 
-   function displayTutorial() {
+   
+    function displayTutorial() {
             var x = document.getElementById("tutorial");
             var y = document.getElementById("tutorialButton");
             if (x.style.display === "none") {
